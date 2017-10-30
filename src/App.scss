@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Buda:300');
+
+body, #root, .App{
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Buda', sans-serif;
+  color: white;
+  background-color: black;
+}
+
+.App {
+  display: grid;
+  grid-gap: 0;
+  margin: 0;
+  grid-template-rows: 1.5fr 1fr 7.5fr;
+  grid-template-areas: 'header' 'search' 'viz';
+}

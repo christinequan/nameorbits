@@ -1,0 +1,47 @@
+
+.svg-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .viz{
+    width: 100%;
+    height: 100%;
+
+    *{
+      shape-rendering: auto;
+    }
+
+    .center {
+    r: 100px;
+    cx: 450px;
+    cy: 200px;
+    fill: none;
+    stroke: purple;
+    stroke-width: 5px;
+    }
+  }
+}
+
+.arc {
+  stroke: yellow;
+  fill: yellow;
+  opacity: 0.5;
+}
+
+text{
+  font: 10px sans-serif;
+  stroke: gray;
+  text-anchor: middle;
+}
+
+circle {
+  r: 5px;
+  stroke: yelloworange;
+}
+
+.petal {
+  fill: none;
+  stroke: lightyellow;
+  r: 3px;
+}

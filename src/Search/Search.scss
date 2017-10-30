@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Buda:300');
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+
+  *{
+    margin: 0.1em;
+  }
+
+  input {
+    font-family: 'Buda', sans-serif;
+    font-weight: bolder;
+    padding: 5px;
+
+    &.query-input {
+      border: solid 1px purple;
+      width: 30%;
+      height: 2em;
+      color: lightgray;
+    }
+
+    &.submit {
+      background: purple;
+      color: white;
+      border: 0;
+      width: 5em;
+      height: 3em;
+    }
+  }
+
+  button {
+    background: purple;
+    color: white;
+    border: 0;
+    height: 75%;
+    padding: 5px;
+  }
+
+}
