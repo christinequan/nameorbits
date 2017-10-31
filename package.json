@@ -5,6 +5,7 @@
   "homepage": "https://christinequan.github.io/nameorbits/.",
   "dependencies": {
     "d3": "^4.11.0",
+    "gsap": "^1.20.3",
     "node-sass-chokidar": "0.0.3",
     "react": "^16.0.0",
     "react-addons-transition-group": "^15.6.2",

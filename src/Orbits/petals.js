@@ -16,7 +16,7 @@ class Petals extends Component{
     const coords = [];
 
     let counter = {};
-    const name_arr = name.toLowerCase().split('');
+    const name_arr = name.toLowerCase().split('').sort(); // TO SORT OR NOT TO SORT
 
     for (let i = 0; i < name.length; i++){
       const letter = name_arr[i];
@@ -50,8 +50,9 @@ class Petals extends Component{
 
   calcPetalPaths(coords, name){
       coords.push(coords[0]);
-      const name_arr = name.toLowerCase().split('');
+      const name_arr = name.toLowerCase().split('').sort(); // TO SORT OR NOT TO SORT?
       const petalpaths = [];
+      let totalPath = '';
 
       for (let i = 0; i < coords.length - 1; i++){
         const dx = coords[i+1][0] - coords[i][0];
@@ -71,6 +72,8 @@ class Petals extends Component{
 
         const path = 'M' + coords[i][0] + ',' + coords[i][1] + 'A' + curve + ' ' + curve + ' 0 1 ' + sweepFlag + ' ' + coords[i+1][0] + ',' + coords[i+1][1];
         petalpaths.push(path);
+        totalPath += path;
+        totalPath += ' ';
       }
       return petalpaths;
   }
@@ -83,6 +86,8 @@ class Petals extends Component{
     return( //separate into two sections because of single jsx return rule
       <g className='petal'>
 
+        {/* <path d={petal_paths}></path> */}
+
         {this.props.name !== "" && petal_paths.map(function(d, i){
           const path = petal_paths;
           return(<path d={path} key={i}></path>)
@@ -92,7 +97,6 @@ class Petals extends Component{
           const transform = {transform: 'translate(' + d[0] + 'px,' + d[1] + 'px)'};
           return(<circle style={transform} className='dots' key={i}></circle>)
         })}
-
 
     </g>
     )

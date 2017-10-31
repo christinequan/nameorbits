@@ -25,7 +25,7 @@
 
 .arc {
   stroke: yellow;
-  // fill: yellow;
+  stroke-width: 0.5px;
   opacity: 0.5;
 }
 
@@ -42,13 +42,21 @@ circle{
   fill: orange;
   }
 
-  &.clockcircle{
-
-  }
 }
 
 .petal {
   fill: none;
-  stroke: lightyellow;
   r: 3px;
+  stroke: lightyellow;
+  stroke-width: 1px;
+
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: dash 5s linear forwards;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
 }

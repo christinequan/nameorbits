@@ -14,6 +14,8 @@ class Orbits extends Component{
     radius: 0
   }
 
+
+
   constructor(props){
     super(props);
     this.alphabet = 'abcdefghijklmnopqrstuvwxyz';
@@ -33,8 +35,9 @@ class Orbits extends Component{
       transform: "translate(" + this.state.width / 2 + "px," + this.state.height / 2 + "px)"
     }
 
+    // ref={(input) => { textInput = input; }}
     return(
-    <div className='svg-container'>
+    <div className='svg-container' >
       <svg className='viz'>
         <g style={g_styles}>
             <AlphaClock alphabet={this.alphabet} radius={this.state.radius}/>
