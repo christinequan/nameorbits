@@ -17,7 +17,7 @@ class Search extends Component{
   render(){
     return (
       <form className='Search' onSubmit={this.submitCallback}>
-        <input type="text" name='name' className="query-input" placeholder = "magic" onFocus={this.focusCallback}/>
+        <input type="text" name='name' className="query-input" placeholder = "Enter a name" onFocus={this.focusCallback}/>
         <input type="submit" className="submit" value="Search" />
         {/* <button className="clear" type="button"> Clear </button> */}
       </form>

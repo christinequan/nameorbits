@@ -25,19 +25,26 @@
 
 .arc {
   stroke: yellow;
-  fill: yellow;
+  // fill: yellow;
   opacity: 0.5;
 }
 
 text{
   font: 10px sans-serif;
-  stroke: gray;
+  stroke: lightyellow;
   text-anchor: middle;
 }
 
-circle {
+circle{
+
+  &.dots {
   r: 5px;
-  stroke: yelloworange;
+  fill: orange;
+  }
+
+  &.clockcircle{
+
+  }
 }
 
 .petal {

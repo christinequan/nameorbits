@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.min.css';
-import Orbits from './Orbits/orbits.js';
+import Orbits from './Orbits/orbits';
 import Search from './Search/Search';
 import TitleBox from './Header/Title';
 
