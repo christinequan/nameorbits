@@ -2,6 +2,7 @@
   "name": "name-orbit-react",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://christinequan.github.io/nameorbits/.",
   "dependencies": {
     "d3": "^4.11.0",
     "node-sass-chokidar": "0.0.3",
@@ -16,6 +17,8 @@
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   }
 }
